@@ -91,15 +91,41 @@ function initScrollAnimations() {
 }
 
 // Mobile Menu Handling
+// function initMobileMenu() {
+//    const hamburger = document.querySelector('.hamburger');
+//    const navLinks = document.querySelector('.nav-links');
+ //   const links = document.querySelectorAll('.nav-links li');
+
+  //  hamburger.addEventListener('click', () => {
+        // Toggle Nav
+   //     navLinks.classList.toggle('nav-active');
+        
+        // Animate Links
+//        links.forEach((link, index) => {
+//            if (link.style.animation) {
+//                link.style.animation = '';
+//            } else {
+//                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+//            }
+//        });
+
+
 function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links li');
+    const body = document.body;
 
     hamburger.addEventListener('click', () => {
         // Toggle Nav
-        navLinks.classList.toggle('nav-active');
+        navLinks.classList.toggle('active');
         
+        // Toggle Hamburger Animation
+        hamburger.classList.toggle('active');
+        
+        // Toggle body scroll
+        body.classList.toggle('menu-open');
+
         // Animate Links
         links.forEach((link, index) => {
             if (link.style.animation) {
@@ -107,7 +133,38 @@ function initMobileMenu() {
             } else {
                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
             }
+            link.classList.toggle('fade');
         });
+    });
+
+    // Close menu when clicking a link
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            body.classList.remove('menu-open');
+            
+            links.forEach(link => {
+                link.style.animation = '';
+                link.classList.remove('fade');
+            });
+        });
+    });
+}
+
+// Add this animation to your existing CSS
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 
         // Hamburger Animation
         hamburger.classList.toggle('toggle');
