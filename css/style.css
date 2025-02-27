@@ -114,7 +114,12 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
-
+.about-text{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
 
 
 /* Certifications Section */
