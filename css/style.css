@@ -24,6 +24,8 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
     line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
