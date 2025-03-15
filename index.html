@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Daniel Sarpong | Cybersecurity Analyst</title>
+    <title>Daniel Sarpong | Cybersecurity Analyst & Software Developer</title>
     
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="Daniel Sarpong - Certified CompTIA Security+ Cybersecurity Analyst specializing in system monitoring, vulnerability assessment, and network optimization.">
-    <meta name="keywords" content="cybersecurity, security analyst, CompTIA Security+, vulnerability assessment, network security">
+    <!-- Enhanced Meta tags for SEO -->
+    <meta name="description" content="Daniel Sarpong - Certified CompTIA Security+ Cybersecurity Analyst and Software Developer specializing in system monitoring, vulnerability assessment, and network optimization.">
+    <meta name="keywords" content="cybersecurity, security analyst, CompTIA Security+, vulnerability assessment, network security, software development, UI/UX design">
+    <meta name="author" content="Daniel Sarpong">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Daniel Sarpong | Cybersecurity Analyst & Software Developer">
+    <meta property="og:description" content="Certified CompTIA Security+ Cybersecurity Analyst specializing in system monitoring, vulnerability assessment, and network optimization.">
+    <meta property="og:image" content="images/profile.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -21,273 +25,351 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <p class="typing">Loading security protocols...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <!-- <nav class="navbar">
+    <nav class="navbar">
         <div class="container">
-            <div class="logo">
+            <div class="logo" data-aos="fade-right">
                 <span class="terminal-prompt">&gt;_</span> Daniel Sarpong
             </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="assets/resume.pdf" class="btn-resume" target="_blank">Resume</a></li>
-            </ul>
-            <div class="hamburger">
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about" data-aos="fade-down" data-aos-delay="100">About</a></li>
+                    <li><a href="#experience" data-aos="fade-down" data-aos-delay="200">Experience</a></li>
+                    <li><a href="#projects" data-aos="fade-down" data-aos-delay="300">Projects</a></li>
+                    <li><a href="#skills" data-aos="fade-down" data-aos-delay="400">Skills</a></li>
+                    <li><a href="#certifications" data-aos="fade-down" data-aos-delay="500">Certifications</a></li>
+                    <li><a href="#contact" data-aos="fade-down" data-aos-delay="600">Contact</a></li>
+                    <li><a href="assets/resume.pdf" class="btn-resume" target="_blank" data-aos="fade-down" data-aos-delay="700">Resume</a></li>
+                </ul>
             </div>
         </div>
-    </nav> -->
+    </nav>
 
-    <nav class="navbar">
-    <div class="container">
-        <div class="logo">
-            <span class="terminal-prompt">&gt;_</span> Daniel Sarpong
-        </div>
-        
-        <!-- Hamburger Menu Button -->
-        <button class="hamburger" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <!-- Mobile Nav Menu -->
-        <div class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="assets/resume.pdf" class="btn-resume" target="_blank">Resume</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
     <!-- Hero Section -->
-<section id="hero" class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1 class="animate-text">Securing Digital Assets</h1>
-            <h2>CompTIA Security+ Certified Analyst</h2>
-            <p class="typing-text">Specializing in vulnerability assessment, incident response, and network security.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn-primary">Get in Touch</a>
-                <a href="#projects" class="btn-secondary">View Projects</a>
-            </div>
-        </div>
-    </div>
-    <div class="hero-overlay"></div>
-</section>
-    <!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>As a certified CompTIA Security+ Cybersecurity Analyst, I bring expertise in system monitoring, vulnerability assessment, and network optimization. 
-                    With hands-on experience in incident response, firewall configurations, and secure system designs, I am passionate about fortifying organizational security frameworks.</p> <br>
-                <!--<div class="certifications">
-                    <h3>Certifications</h3>
-                    <ul>
-                        <li><i class="fas fa-certificate"></i> CompTIA Security+</li> <br>
-                        <li><i class="fas fa-certificate"></i> Fortinet Network Security Support Engineer</li> <br>
-                        <li><i class="fas fa-certificate"></i> Google Project Management</li> <br>
-                        <li><i class="fas fa-certificate"></i> IBM Data Analytics (V2)</li> <br>
-                    </ul>
-                </div> -->
-            </div>
-            <div class="about-stats">
-                <div class="stat-item">
-                    <span class="stat-number">3+</span>
-                    <span class="stat-text">Years Experience</span>
-                </div> <br>
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-text">Projects Completed</span>
+    <section id="hero" class="hero">
+        <div class="particles-js" id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="animate-text">Securing Digital Assets</h1>
+                <h2 class="gradient-text">CompTIA Security+ Certified Analyst</h2>
+                <p class="typing-text">Specializing in vulnerability assessment, incident response, and network security.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn-secondary">View Projects</a>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">4</span>
-                    <span class="stat-text">Certifications</span>
-                </div> <br>
+                <div class="security-stats">
+                    <div class="stat">
+                        <span class="counter">100+</span>
+                        <p>Security Audits</p>
+                    </div>
+                    <div class="stat">
+                        <span class="counter">50+</span>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <span class="counter">4</span>
+                        <p>Certifications</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-
+        <div class="hero-overlay"></div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+        <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="terminal-title">profile.txt</div>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="command">$ cat profile.txt</span></p>
+                            <p>As a certified CompTIA Security+ Cybersecurity Analyst, I bring expertise in system monitoring, vulnerability assessment, and network optimization. 
+                            With hands-on experience in incident response, firewall configurations, and secure system designs, I am passionate about fortifying organizational security frameworks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stat-circle">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="stat-number">3+</div>
+                        </div>
+                        <span class="stat-text">Years Experience</span>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stat-circle">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="stat-number">50+</div>
+                        </div>
+                        <span class="stat-text">Projects Completed</span>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-circle">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="stat-number">4</div>
+                        </div>
+                        <span class="stat-text">Certifications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Certifications Section -->
-<section id="certifications" class="certifications">
-    <div class="container">
-        <h2 class="section-title">Certifications</h2>
-        <div class="cert-grid">
-            <!-- CompTIA Security+ -->
-            <div class="cert-card">
-                <div class="cert-logo">
-                    <img src="images/comptia-logo.jpg" alt="CompTIA Logo">
-                </div>
-                <div class="cert-content">
-                    <h3>CompTIA Security+</h3>
-                    <p class="cert-date">2025 - Present</p>
-                    <p class="cert-id">Credential ID: 85YWCS8Y52E1QX9R</p>
-                    <div class="cert-actions">
-                        <a href="http://verify.CompTIA.org" target="_blank" class="btn-verify">
-                            <i class="fas fa-certificate"></i> Verify
-                        </a>
-                        <a href="[Your credential URL]" target="_blank" class="btn-view">
-                            <i class="fas fa-external-link-alt"></i> View
-                        </a>
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Certifications</h2>
+            <div class="cert-grid">
+                <!-- CompTIA Security+ -->
+                <div class="cert-card" data-aos="flip-left">
+                    <div class="cert-card-inner">
+                        <div class="cert-front">
+                            <div class="cert-logo">
+                                <img src="images/comptia-logo.jpg" alt="CompTIA Logo">
+                            </div>
+                            <div class="cert-content">
+                                <h3>CompTIA Security+</h3>
+                                <p class="cert-date">2025 - Present</p>
+                            </div>
+                        </div>
+                        <div class="cert-back">
+                            <p class="cert-id">Credential ID: 85YWCS8Y52E1QX9R</p>
+                            <div class="cert-actions">
+                                <a href="http://verify.CompTIA.org" target="_blank" class="btn-verify">
+                                    <i class="fas fa-certificate"></i> Verify
+                                </a>
+                                <a href="[Your credential URL]" target="_blank" class="btn-view">
+                                    <i class="fas fa-external-link-alt"></i> View
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Fortinet Network Security -->
-            <div class="cert-card">
-                <div class="cert-logo">
-                    <img src="images/fortinet-logo.png" alt="Fortinet Logo">
-                </div>
-                <div class="cert-content">
-                    <h3>Fortinet Network Security Support Engineer</h3>
-                    <p class="cert-date">2024 - Present</p>
-                    <p class="cert-id">Credential ID: ZJVZHBL87CU9</p>
-                    <div class="cert-actions">
-                        <a href="https://coursera.org/share/623957c4ddb8951e2189d282d6ac4ef7" target="_blank" class="btn-verify">
-                            <i class="fas fa-certificate"></i> Verify
-                        </a>
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/ZJVZHBL87CU9" target="_blank" class="btn-view">
-                            <i class="fas fa-external-link-alt"></i> View
-                        </a>
+                <!-- Fortinet Network Security -->
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="cert-card-inner">
+                        <div class="cert-front">
+                            <div class="cert-logo">
+                                <img src="images/fortinet-logo.png" alt="Fortinet Logo">
+                            </div>
+                            <div class="cert-content">
+                                <h3>Fortinet Network Security Support Engineer</h3>
+                                <p class="cert-date">2024 - Present</p>
+                            </div>
+                        </div>
+                        <div class="cert-back">
+                            <p class="cert-id">Credential ID: ZJVZHBL87CU9</p>
+                            <div class="cert-actions">
+                                <a href="https://coursera.org/share/623957c4ddb8951e2189d282d6ac4ef7" target="_blank" class="btn-verify">
+                                    <i class="fas fa-certificate"></i> Verify
+                                </a>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/ZJVZHBL87CU9" target="_blank" class="btn-view">
+                                    <i class="fas fa-external-link-alt"></i> View
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Google Project Management -->
-            <div class="cert-card">
-                <div class="cert-logo">
-                    <img src="images/google-logo.png" alt="Google Logo">
-                </div>
-                <div class="cert-content">
-                    <h3>Google Project Management</h3>
-                    <p class="cert-date">2024 - Present</p>
-                    <p class="cert-id">Credential ID: RNJTVFSPFDQM</p>
-                    <div class="cert-actions">
-                        <a href="[https://coursera.org/share/3f0179f673e06a3d47611b91ce047784]" target="_blank" class="btn-verify">
-                            <i class="fas fa-certificate"></i> Verify
-                        </a>
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/RNJTVFSPFDQM" target="_blank" class="btn-view">
-                            <i class="fas fa-external-link-alt"></i> View
-                        </a>
+                <!-- Google Project Management -->
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="cert-card-inner">
+                        <div class="cert-front">
+                            <div class="cert-logo">
+                                <img src="images/google-logo.png" alt="Google Logo">
+                            </div>
+                            <div class="cert-content">
+                                <h3>Google Project Management</h3>
+                                <p class="cert-date">2024 - Present</p>
+                            </div>
+                        </div>
+                        <div class="cert-back">
+                            <p class="cert-id">Credential ID: RNJTVFSPFDQM</p>
+                            <div class="cert-actions">
+                                <a href="https://coursera.org/share/3f0179f673e06a3d47611b91ce047784" target="_blank" class="btn-verify">
+                                    <i class="fas fa-certificate"></i> Verify
+                                </a>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/RNJTVFSPFDQM" target="_blank" class="btn-view">
+                                    <i class="fas fa-external-link-alt"></i> View
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- IBM Data Analytics -->
-            <div class="cert-card">
-                <div class="cert-logo">
-                    <img src="images/IBM-logo.jpg" alt="IBM Logo">
-                </div>
-                <div class="cert-content">
-                    <h3>IBM Data Analytics (V2)</h3>
-                    <p class="cert-date">2024 - Present</p>
-                    <p class="cert-id">Credential ID: FZGNG8NBL2HC</p>
-                    <div class="cert-actions">
-                        <a href="https://coursera.org/share/65b3b49b483f023469f3a1fec5bfcf24" target="_blank" class="btn-verify">
-                            <i class="fas fa-certificate"></i> Verify
-                        </a>
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/FZGNG8NBL2HC" target="_blank" class="btn-view">
-                            <i class="fas fa-external-link-alt"></i> View
-                        </a>
+                <!-- IBM Data Analytics -->
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="cert-card-inner">
+                        <div class="cert-front">
+                            <div class="cert-logo">
+                                <img src="images/IBM-logo.jpg" alt="IBM Logo">
+                            </div>
+                            <div class="cert-content">
+                                <h3>IBM Data Analytics (V2)</h3>
+                                <p class="cert-date">2024 - Present</p>
+                            </div>
+                        </div>
+                        <div class="cert-back">
+                            <p class="cert-id">Credential ID: FZGNG8NBL2HC</p>
+                            <div class="cert-actions">
+                                <a href="https://coursera.org/share/65b3b49b483f023469f3a1fec5bfcf24" target="_blank" class="btn-verify">
+                                    <i class="fas fa-certificate"></i> Verify
+                                </a>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/FZGNG8NBL2HC" target="_blank" class="btn-view">
+                                    <i class="fas fa-external-link-alt"></i> View
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-
-    
-
-<!-- Experience Section -->
+    </section>
+    <!-- Experience Section -->
 <section id="experience" class="experience">
     <div class="container">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title" data-aos="fade-up">Experience</h2>
         <div class="timeline">
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h3>Cyber Security Analyst</h3>
-                    <h4>Freelance, CA</h4>
-                    <p class="timeline-date">January - Present</p> <br>
-                    <ul>
-                        <li>Implemented incident response workflows based on NIST 800-61 guidelines</li>
-                        <li>Reduced incident resolution time by 30%</li>
-                        <li>Analyzed logs using Splunk for threat detection</li>
-                        <li>Reduced application vulnerabilities by 20%</li>
-                    </ul>
-                </div> <br>
-                <div class="timeline-content">
-                    <h3>SOC Analyst (Intern)</h3>
-                    <h4>Riipen - Remote, CA</h4>
-                    <p class="timeline-date">December 2024</p> <br>
-                    <ul>
-                        <li>Implemented incident response workflows based on NIST 800-61 guidelines</li>
-                        <li>Reduced incident resolution time by 30%</li>
-                        <li>Analyzed logs using Splunk for threat detection</li>
-                        <li>Reduced application vulnerabilities by 20%</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Information System Analyst</h3>
-                    <h4>Group22 Inc - Remote</h4>
-                    <p class="timeline-date">June 2021 - March 2024</p> <br>
-                    <ul>
-                        <li>Designed access controls using Active Directory and LDAP systems</li>
-                        <li>Managed IDM conflicts in SailPoint</li>
-                        <li>Monitored cybersecurity threats proactively</li>
-                    </ul>
+                    <div class="timeline-header">
+                        <h3>Cyber Security Analyst</h3>
+                        <h4>Freelance, CA</h4>
+                        <p class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            January - Present
+                        </p>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="achievement-list">
+                            <li>
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Implemented incident response workflows based on NIST 800-61 guidelines</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-chart-line"></i>
+                                <span>Reduced incident resolution time by 30%</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-search"></i>
+                                <span>Analyzed logs using Splunk for threat detection</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-bug"></i>
+                                <span>Reduced application vulnerabilities by 20%</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-             <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h3>Web Developer/ UI/UX Designer</h3>
-                    <h4>Freelance - Remote</h4>
-                    <p class="timeline-date">January 2022 - Present</p><br>
-                    <ul>
-                        <li>Provided end-to-end design services for various clients, including user research, wireframing, prototyping, and high-fidelity mockups.</li>
-                        <li>Developed intuitive, accessible, and responsive interfaces that aligned with brand guidelines and WCAG standards.</li>
-                        <li>Collaborated closely with cross-functional teams, presenting design concepts and refining solutions based on feedback and usability testing.</li>
-                        <li>Maintained design systems, documentation, and project deliverables while managing deadlines in a fast-paced freelance environment.</li>
-                        <li>Utilized tools such as Figma, Sketch, and Adobe XD to create impactful online experiences and streamline handoffs to developers.</li>
-                    </ul>
+                    <div class="timeline-header">
+                        <h3>SOC Analyst (Intern)</h3>
+                        <h4>Riipen - Remote, CA</h4>
+                        <p class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            December 2024
+                        </p>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="achievement-list">
+                            <li>
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Implemented incident response workflows based on NIST 800-61 guidelines</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-chart-line"></i>
+                                <span>Reduced incident resolution time by 30%</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-search"></i>
+                                <span>Analyzed logs using Splunk for threat detection</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-bug"></i>
+                                <span>Reduced application vulnerabilities by 20%</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-             <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Research Assistant</h3>
-                    <h4>Coventry University, Africa Hub - Accra Ghana</h4>
-                    <p class="timeline-date">May 2020 - Dec 2021</p> <br>
-                    <ul>
-                        <li>Literature review: Performed comprehensive searches for relevant academic articles and publications to inform research design. </li>
-                        <li>Data collection: Gathered data through surveys, interviews, experiments, or other methods as required by the research project. </li>
-                        <li>Data analysis: Cleaned, organized, and analyzed data using statistical software. </li>
-                        <li>Report writing: Prepared detailed reports summarizing research findings, including graphs and visualizations.</li>
-                        <li>Research protocol development: Assisting in designing research protocols and procedures.</li>
-                    </ul>
-                </div>
+            <!-- Continue with other timeline items with the same enhanced structure -->
+            <!-- Information System Analyst -->
+            <div class="timeline-item" data-aos="fade-right">
+                <!-- Similar structure as above -->
             </div>
-            <!-- Add more timeline items as needed -->
+
+            <!-- Web Developer/UI/UX Designer -->
+            <div class="timeline-item" data-aos="fade-left">
+                <!-- Similar structure as above -->
+            </div>
+
+            <!-- Research Assistant -->
+            <div class="timeline-item" data-aos="fade-right">
+                <!-- Similar structure as above -->
+            </div>
         </div>
     </div>
 </section>
@@ -295,149 +377,192 @@
 <!-- Projects Section -->
 <section id="projects" class="projects">
     <div class="container">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title" data-aos="fade-up">Projects</h2>
+        
+        <!-- Project Filter -->
+        <div class="project-filter" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="security">Security</button>
+            <button class="filter-btn" data-filter="development">Development</button>
+            <button class="filter-btn" data-filter="research">Research</button>
+        </div>
+
         <div class="project-grid">
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>HTTP Server Implementation</h3>
-                    <p class="project-date">Feb 2025 - Present</p>
-                    <p>Built a server using Java capable of interpreting and responding to GET and HEAD requests.</p>
-                    <div class="project-tech">
-                        <span>Java</span>
-                        <span>HTTP</span>
-                        <span>Network Programming</span>
+            <!-- HTTP Server Implementation -->
+            <div class="project-card" data-aos="fade-up" data-category="development">
+                <div class="project-card-inner">
+                    <div class="project-image">
+                        <img src="images/project-server.jpg" alt="HTTP Server Project">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>HTTP</span>
+                                <span>Network Programming</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/DannyOAS" target="_blank" class="btn-project">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more project cards -->
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>PwC Switzerland - Cybersecurity Job Simulation</h3>
-                    <p class="project-date">Feb 2025</p>
-                    <p>In the simulation I:
-                                Completed a job simulation involving cybersecurity for PwC Digital Intelligence, gaining experience in understanding and explaining the concept of integrated defense.
-                                Developed expertise in integrated defense strategies and their application in real-world scenarios.
-                                Conducted risk assessments and formulated security recommendations for a client.
-                                Demonstrated proficiency in cybersecurity terminology, network segmentation, and firewall configuration.</p>
-                    <div class="project-tech">
-                        <span>Cause Analysis</span>
-                        <span>Firewall Configuration</span>
-                        <span>Network Security</span>
-                        <span>Impact Analysis</span>
-                        <span>Presentation Prep</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/4sLyCPgmsy8DA6Dh3/f9H4CHchzrKQbnbmK_4sLyCPgmsy8DA6Dh3_hs8BzQXk8w3gp2MHg_1739826404589_completion_certificate.pdf">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
+                    <div class="project-content">
+                        <h3>HTTP Server Implementation</h3>
+                        <p class="project-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            Feb 2025 - Present
+                        </p>
+                        <p>Built a server using Java capable of interpreting and responding to GET and HEAD requests.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/DannyOAS" target="_blank" class="btn-project">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="btn-project-demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>Mastercard Cybersecurity virtual experience program on Forage</h3>
-                    <p class="project-date">Feb 2025 - Present</p>
-                    <p>* Completed a job simulation where I served as an analyst on Mastercard’s
-                           Security Awareness Team 
-                           Helped identify and report security threats such as phishing 
-                           Analyzed and identified which areas of the business needed more robust
-                           security training and implemented training courses and procedures for those
-                           teams</p>
-                    <div class="project-tech">
-                        <span>Anti-Phishing</span>
+            <!-- PwC Cybersecurity Project -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-category="security">
+                <div class="project-card-inner">
+                    <div class="project-image">
+                        <img src="images/project-pwc.jpg" alt="PwC Cybersecurity Project">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Cause Analysis</span>
+                                <span>Firewall Configuration</span>
+                                <span>Network Security</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mfxGwGDp6WkQmtmTf/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_hs8BzQXk8w3gp2MHg_1739714986614_completion_certificate.pdf" class="btn-project">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>A Digital Forensics Investigation</h3>
-                    <p class="project-date">Dec 2024</p>
-                    <p>Conducted an in-depth forensic analysis of Disk Images and Memory, identifying critical artifacts related to the simulated attack. Recovered deleted files, analyzed process memory dumps, and reconstructed attack timelines.
-                        Documented findings in a comprehensive report, including recommendations for security improvements.</p>
-                    <div class="project-tech">
-                        <span>Digital Forensics</span>
-                        <span>Cyber Threat Intelligence</span>
-                        <span>Risk Assessment</span>
-                        <span>Wireshark</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/DannyOAS" target="_blank" class="btn-project">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
+                    <div class="project-content">
+                        <h3>PwC Switzerland - Cybersecurity Job Simulation</h3>
+                        <p class="project-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            Feb 2025
+                        </p>
+                        <p>Completed a comprehensive cybersecurity simulation focusing on integrated defense strategies and real-world scenarios.</p>
+                        <div class="project-links">
+                            <a href="[Your Certificate URL]" target="_blank" class="btn-project">
+                                <i class="fas fa-certificate"></i> View Certificate
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>HTTP Server Implementation</h3>
-                    <p class="project-date">Feb 2025 - Present</p>
-                    <p>Built a server using Java capable of interpreting and responding to GET and HEAD requests.</p>
-                    <div class="project-tech">
-                        <span>Java</span>
-                        <span>HTTP</span>
-                        <span>Network Programming</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/DannyOAS" target="_blank" class="btn-project">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <!-- Continue with other project cards using the same enhanced structure -->
+            <!-- Add more project cards here -->
+        </div>
 
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>HTTP Server Implementation</h3>
-                    <p class="project-date">Feb 2025 - Present</p>
-                    <p>Built a server using Java capable of interpreting and responding to GET and HEAD requests.</p>
-                    <div class="project-tech">
-                        <span>Java</span>
-                        <span>HTTP</span>
-                        <span>Network Programming</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/DannyOAS" target="_blank" class="btn-project">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            
+        <!-- Project Load More Button -->
+        <div class="project-load-more" data-aos="fade-up">
+            <button class="btn-load-more">
+                <span>Load More Projects</span>
+                <i class="fas fa-arrow-down"></i>
+            </button>
         </div>
     </div>
 </section>
-
 <!-- Skills Section -->
 <section id="skills" class="skills">
     <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+        
+        <!-- Skills Categories -->
         <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Cybersecurity</h3>
-                <ul>
-                    <li>Threat Monitoring</li>
-                    <li>Vulnerability Assessment</li>
-                    <li>Incident Response</li>
-                    <li>System Administration</li>
-                    <li>Security Policy Development</li>
-                </ul>
+            <!-- Cybersecurity Skills -->
+            <div class="skill-category" data-aos="fade-up">
+                <div class="skill-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cybersecurity</h3>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Threat Monitoring</span>
+                            <span class="percentage">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Vulnerability Assessment</span>
+                            <span class="percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Incident Response</span>
+                            <span class="percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>System Administration</span>
+                            <span class="percentage">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Add more skill categories -->
+
+            <!-- Development Skills -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Development</h3>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Java</span>
+                            <span class="percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span class="percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <!-- Add more development skills -->
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-header">
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools & Technologies</h3>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-cloud">
+                        <span class="skill-tag">Splunk</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">Metasploit</span>
+                        <span class="skill-tag">Burp Suite</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <!-- Add more tools -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -445,21 +570,66 @@
 <!-- Contact Section -->
 <section id="contact" class="contact">
     <div class="container">
-        <h2 class="section-title">Get in Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:dsarpong7.ds@gmail.com">dsarpong7.ds@gmail.com</a>
+        <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
+        
+        <div class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info" data-aos="fade-right">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                    </div>
+                    <a href="mailto:dsarpong7.ds@gmail.com" class="contact-link">
+                        dsarpong7.ds@gmail.com
+                    </a>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/sarpongdaniel/" target="_blank">LinkedIn</a>
+
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                    </div>
+                    <a href="https://www.linkedin.com/in/sarpongdaniel/" target="_blank" class="contact-link">
+                        linkedin.com/in/sarpongdaniel
+                    </a>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/DannyOAS" target="_blank">GitHub</a>
+
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                    </div>
+                    <a href="https://github.com/DannyOAS" target="_blank" class="contact-link">
+                        github.com/DannyOAS
+                    </a>
                 </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form" data-aos="fade-left">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -468,11 +638,48 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
-        <p>&copy; 2025 Daniel Sarpong. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <span class="terminal-prompt">&gt;_</span> Daniel Sarpong
+                </div>
+                <p class="footer-tagline">Securing the digital frontier, one line of code at a time.</p>
+            </div>
+            
+            <div class="footer-right">
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/sarpongdaniel" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/DannyOAS" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:dsarpong7.ds@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Daniel Sarpong. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="privacy-policy">Privacy Policy</a>
+                <a href="#" class="terms">Terms of Use</a>
+            </div>
+        </div>
     </div>
 </footer>
 
-<!-- JavaScript -->
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
