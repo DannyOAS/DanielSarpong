@@ -1,9 +1,10 @@
 // main.js
 
 // Wait for DOM to be fully loaded
+// main.js
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all functions
-    initPreloader();
     initNavigation();
     initParticles();
     initTypingEffect();
