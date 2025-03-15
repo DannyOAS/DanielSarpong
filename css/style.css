@@ -57,14 +57,14 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-light);
     overflow-x: hidden;
-    overflow: hidden; /* Initially hide scrolling */
+    /*overflow: hidden; /* Initially hide scrolling */
 }
 
-body.loaded {
+/*body.loaded {
 
     overflow: visible; /* Show scrolling after load */
 
-}
+}*/
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
@@ -96,7 +96,7 @@ p {
     margin: 0 auto;
     padding: 0 var(--spacing-sm);
 }
-/* Preloader Styles */
+/* Preloader Styles 
 .preloader {
     position: fixed;
     top: 0;
@@ -122,7 +122,7 @@ p {
     padding: var(--spacing-sm);
     border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-lg);
-}
+}*/
 
 .terminal {
     background: var(--bg-dark);
