@@ -57,6 +57,13 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-light);
     overflow-x: hidden;
+    overflow: hidden; /* Initially hide scrolling */
+}
+
+body.loaded {
+
+    overflow: visible; /* Show scrolling after load */
+
 }
 
 /* Typography */
