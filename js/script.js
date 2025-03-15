@@ -52,6 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // ... other init functions
 });
 
+// Fallback for preloader
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        if (preloader && preloader.style.display !== 'none') {
+            preloader.style.display = 'none';
+            document.body.classList.add('loaded');
+        }
+    }, 5000); // 5 second fallback
+});
+
 // Navigation and Scroll Handling
 function initNavigation() {
     const navbar = document.querySelector('.navbar');
