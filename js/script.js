@@ -19,17 +19,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Preloader
 function initPreloader() {
-    const preloader = document.querySelector('.preloader');
+    const preloader = document.getElementById('preloader');
     
-    window.addEventListener('load', () => {
-        preloader.classList.add('fade-out');
+    if (preloader) {
+        // Remove preloader after content is loaded
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    document.body.classList.add('loaded');
+                }, 500);
+            }, 1000); // Adjust this timeout if needed
+        });
+
+        // Fallback: Remove preloader if it takes too long
         setTimeout(() => {
-            preloader.style.display = 'none';
-            // Trigger entrance animations after preloader
-            document.body.classList.add('loaded');
-        }, 1000);
-    });
+            if (preloader.style.display !== 'none') {
+                preloader.classList.add('fade-out');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    document.body.classList.add('loaded');
+                }, 500);
+            }
+        }, 5000); // Fallback timeout
+    }
 }
+
+// Make sure this function is called
+document.addEventListener('DOMContentLoaded', () => {
+    initPreloader();
+    // ... other init functions
+});
 
 // Navigation and Scroll Handling
 function initNavigation() {
