@@ -245,165 +245,268 @@ body {
 }
 
 
-/* About Section */
-.about {
+/* Skills Section */
+.skills {
     padding: 100px 0;
     background-color: #ffffff;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #1a1a1a;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #3498db;
-}
-
-.about-content {
-    max-width: 1000px;
-    margin: 0 auto;
+.skills-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.about-text {
+.skill-category {
     background: #ffffff;
-    padding: 2rem;
     border-radius: 15px;
+    padding: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.skill-header i {
+    font-size: 1.5rem;
+    color: #3498db;
+}
+
+.skill-header h3 {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
     color: #444;
 }
 
-/* Certifications Section */
-.certifications {
+.percentage {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #3498db;
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.skill-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    padding: 0.8rem 1.2rem;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 25px;
+    color: #3498db;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Contact Section */
+.contact {
     padding: 100px 0;
     background-color: #f8f9fa;
 }
 
-.cert-grid {
+.contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.cert-card {
+.contact-card {
     background: #ffffff;
     border-radius: 15px;
-    overflow: hidden;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
-.cert-card:hover {
+.contact-card:hover {
     transform: translateY(-5px);
 }
 
-.cert-logo {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    background: #f8f9fa;
+.contact-icon {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
 }
 
-.cert-logo img {
-    max-height: 60px;
-    max-width: 80%;
-    object-fit: contain;
-}
-
-.cert-content {
-    padding: 1.5rem;
-}
-
-.cert-content h3 {
-    font-size: 1.2rem;
+.contact-card h3 {
     color: #1a1a1a;
     margin-bottom: 0.5rem;
 }
 
-.cert-date {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.cert-id {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 0.85rem;
-    color: #666;
-    padding: 0.5rem;
-    background: #f8f9fa;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-.cert-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-.btn-verify, .btn-view {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+.contact-card a {
+    color: #3498db;
     text-decoration: none;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #2980b9;
+}
+
+.contact-form {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
-.btn-verify {
-    background-color: #3498db;
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #3498db;
     color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.btn-view {
-    border: 1px solid #3498db;
-    color: #3498db;
-}
-
-.btn-verify:hover, .btn-view:hover {
+.btn-submit:hover {
+    background: #2980b9;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .cert-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Footer */
 .footer {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    padding: 2rem 0;
+    background: #1a1a1a;
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-tagline {
+    color: #666;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #3498db;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
     text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-social {
+        margin-top: 1.5rem;
+    }
 }
 
 /* Mobile Menu */
