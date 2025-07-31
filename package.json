@@ -1,0 +1,17 @@
+{
+  "name": "futuristic-portfolio",
+  "version": "1.0.0",
+  "description": "Ultra-modern portfolio with 3D effects and futuristic design",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server",
+    "build-css": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+  },
+  "keywords": ["portfolio", "three.js", "tailwind", "modern"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "live-server": "^1.2.2"
+  }
+}
